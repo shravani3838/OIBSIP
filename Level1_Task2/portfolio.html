@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="pictures/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi,I'm<span> Kevin</span> <br> Jen From Australia</h1>
+                
+            </div>
+
+             
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pictures/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, consequatur! Provident cumque voluptatem quis ea repellat nulla sit officiis amet quos necessitatibus architecto, accusantium asperiores, cum aperiam. Perspiciatis est, quis debitis molestias cumque dolorum ipsa, natus veritatis suscipit voluptatum voluptas nihil nemo maxime libero quidem soluta culpa provident eum. Facilis obcaecati voluptatum aliquam maxime laboriosam.</p>
+
+                    <div class="tab-titles">
+                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                     <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                     <p class="tab-links"  onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/app interface</li>
+                             <li><span>Web Development</span><br>web app development</li>
+                            <li><span>App Development</span><br>Building Android/ios app</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/Ux Design trainig at ET institute</li>
+                             <li><span>2019 - 2021</span><br>Team Lead at StarApp LLC.</li>
+                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>UI/Ux Design trainig at ET institute</li>
+                             <li><span>2016</span><br>MBA from MIT Banglore</li>
+                            <li><span>2014</span><br>BBA from ISM Banglore</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores officiis velit deserunt aliquid!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores officiis velit deserunt aliquid!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores officiis velit deserunt aliquid!</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
